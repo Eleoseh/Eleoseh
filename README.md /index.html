@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+<title>A Birthday Story</title>
+
+<style>
+
+body{
+margin:0;
+font-family: Georgia, serif;
+background:black;
+color:white;
+text-align:center;
+}
+
+section{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+button{
+margin-top:30px;
+padding:15px 25px;
+font-size:18px;
+border:none;
+border-radius:8px;
+background:#ff4da6;
+color:white;
+}
+
+.hidden{
+display:none;
+}
+
+img{
+width:250px;
+border-radius:10px;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section id="scene0">
+<h1>Today is About Someone Special</h1>
+<p>Tap to begin the story</p>
+<button onclick="nextScene()">Begin</button>
+</section>
+
+<section class="hidden" id="scene1">
+<h2>Once Upon A Time</h2>
+<p>A remarkable person named Elisha was born.</p>
+<button onclick="nextScene()">Continue</button>
+</section>
+
+<section class="hidden" id="scene2">
+<h2>The Journey</h2>
+<p>A life of curiosity, faith, ideas and creativity.</p>
+<button onclick="nextScene()">Continue</button>
+</section>
+
+<section class="hidden" id="scene3">
+<h1>Happy Birthday 🎉</h1>
+<p>May your story keep getting better.</p>
+</section>
+
+<script>
+
+let current = 0
+
+function nextScene(){
+
+document.getElementById("scene"+current).classList.add("hidden")
+
+current++
+
+document.getElementById("scene"+current).classList.remove("hidden")
+
+}
+
+</script>
+
+</body>
+  </html>
